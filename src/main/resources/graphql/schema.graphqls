@@ -1,0 +1,43 @@
+type Theme {
+    id: ID!
+    title: String!
+    creator: String!
+    items: [Item]
+}
+
+type Item {
+    id: ID
+    name: String
+    themeId: Int
+}
+
+type Answer {
+    id: ID!
+    theme: Theme
+    answerer: String!
+
+}
+
+type AnswerItem {
+    id: ID!
+    itemId: Int!
+    val: Int!
+}
+
+input ThemeInput {
+    title: String!
+    creator: String!
+    itemInputs: [ItemInput]!
+}
+
+input ItemInput {
+    name: String!
+}
+
+type Query {
+    getTheme(id: Int): Theme
+}
+
+type Mutation {
+    insertTheme(input: ThemeInput): Int
+}

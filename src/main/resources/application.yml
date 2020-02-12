@@ -1,0 +1,20 @@
+spring:
+  h2:
+    console:
+      enabled: true
+    path: /h2
+  profiles: localhost
+  datasource:
+    driverClassName: org.h2.Driver
+    url: jdbc:h2:./mem/local
+    username: user
+    password: password
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: DEBUG
