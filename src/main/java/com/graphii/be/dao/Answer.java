@@ -1,6 +1,7 @@
 package com.graphii.be.dao;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -10,6 +11,7 @@ import javax.persistence.Id;
 
 @Data
 @Entity
+@Builder
 @NoArgsConstructor
 @AllArgsConstructor
 public class Answer {
@@ -19,4 +21,5 @@ public class Answer {
     private Integer id;
     private int themeId;
     private String answerer;
+    private String imageUrl;
 }

@@ -13,9 +13,9 @@ type Item {
 
 type Answer {
     id: ID!
-    theme: Theme
     answerer: String!
-
+    answerItems: [AnswerItem]
+    imageUrl: String!
 }
 
 type AnswerItem {
@@ -34,10 +34,24 @@ input ItemInput {
     name: String!
 }
 
+input AnswerInput {
+    themeId: Int
+    answerer: String!
+    imageUrl: String!
+    answerItemInputs: [AnswerItemInput]
+}
+
+input AnswerItemInput {
+    itemId: Int
+    val: Int
+}
+
 type Query {
     getTheme(id: Int): Theme
+    getAnswer(id: Int): Answer
 }
 
 type Mutation {
     insertTheme(input: ThemeInput): Int
+    insertAnswer(input: AnswerInput): Int
 }
