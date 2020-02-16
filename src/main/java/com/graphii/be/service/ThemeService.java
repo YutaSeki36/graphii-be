@@ -38,6 +38,7 @@ public class ThemeService {
                 .id(theme.get().getId())
                 .title(theme.get().getTitle())
                 .creator(theme.get().getCreator())
+                .imageUrl(theme.get().getImageUrl())
                 .items(themeItems)
                 .build();
     }
@@ -47,6 +48,7 @@ public class ThemeService {
         Theme theme = Theme.builder()
                 .title(themeInput.getTitle())
                 .creator(themeInput.getCreator())
+                .imageUrl(themeInput.getImageUrl())
                 .build();
         
         Theme themeResult = themeRepository.save(theme);

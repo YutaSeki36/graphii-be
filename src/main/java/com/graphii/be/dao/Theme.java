@@ -20,5 +20,6 @@ public class Theme {
     @GeneratedValue
     private Integer id;
     private String title;
+    private String imageUrl;
     private String creator;
 }

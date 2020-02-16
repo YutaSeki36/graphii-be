@@ -16,6 +16,7 @@ public class Theme {
     private Integer id;
     private String title;
     private String creator;
+    private String imageUrl;
     private List<Item> items;
 
     @Data

@@ -15,6 +15,7 @@ public class ThemeInput {
 
     private String title;
     private String creator;
+    private String imageUrl;
     private List<ItemInput> itemInputs;
 
     @Data

@@ -2,6 +2,7 @@ type Theme {
     id: ID!
     title: String!
     creator: String!
+    imageUrl: String!
     items: [Item]
 }
 
@@ -27,6 +28,7 @@ type AnswerItem {
 input ThemeInput {
     title: String!
     creator: String!
+    imageUrl: String!
     itemInputs: [ItemInput]!
 }
 
