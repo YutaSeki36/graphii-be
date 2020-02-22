@@ -17,6 +17,7 @@ public class AnswerResponse {
     private String answerer;
     private String imageUrl;
     private List<AnswerItem> answerItems;
+    private Theme theme;
 
     @Data
     @Builder
