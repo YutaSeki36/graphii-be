@@ -8,7 +8,7 @@ public class ThemeInputValidation {
 
         if(input.getTitle().isEmpty()) throw new IllegalArgumentException("お題を入力してください");
         if(input.getCreator().isEmpty()) throw new IllegalArgumentException("作成者を入力してください");
-        if (input.getItemInputs().size() < 4) throw new IllegalArgumentException("項目を3つ以上追加してください");
+        if (input.getItemInputs().size() < 3) throw new IllegalArgumentException("項目を3つ以上追加してください");
         if(input.getImageUrl().isEmpty()) throw new IllegalArgumentException("画像のURLがありません");
 
         if(input.getTitle().length() < 1 || input.getTitle().length() > 80){
