@@ -3,6 +3,7 @@ type Theme {
     title: String!
     creator: String!
     imageUrl: String!
+    answerCount: Int
     items: [Item]
 }
 
@@ -51,6 +52,7 @@ input AnswerItemInput {
 
 type Query {
     getTheme(id: Int): Theme
+    getThemeList: [Theme]
     getAnswer(id: Int): Answer
 }
 

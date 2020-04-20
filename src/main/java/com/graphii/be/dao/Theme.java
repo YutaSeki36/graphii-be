@@ -14,7 +14,7 @@ import javax.persistence.Id;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class Theme {
+public class Theme extends Auditable<String>  {
 
     @Id
     @GeneratedValue

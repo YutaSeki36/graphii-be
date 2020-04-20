@@ -7,6 +7,8 @@ import com.graphii.be.service.ThemeService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
+import java.util.Arrays;
+import java.util.List;
 import java.util.Optional;
 
 @Component
@@ -18,5 +20,9 @@ public class ThemeQueryResolver implements GraphQLQueryResolver {
     public Theme getTheme(Integer id){
 
         return themeService.getTheme(id);
+    }
+
+    public List<Theme> getThemeList() {
+        return themeService.getThemeList();
     }
 }
